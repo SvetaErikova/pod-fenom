@@ -1,0 +1,65 @@
+.image-text
+  &__container
+    display: flex
+    flex-direction: column
+    color: #B0B0B0
+    gap: calc(var(--u-ritmo-verticale-vw) * 12)
+    padding: 0 calc(var(--u-ritmo-verticale-vw) * 1)
+    @media (min-width: 641px)
+      display: grid
+      grid-template-columns: auto 1fr
+      padding: 0
+  @media (min-width: 641px)
+    &__image
+      position: relative
+      aspect-ratio: 868/800
+      height: 100vh
+      width: auto
+      //width: calc(var(--u-ritmo-verticale-vw) * 108.5)
+      &_item
+        position: absolute
+        top: 0
+        left: 0
+        overflow: hidden
+        width: 100%
+        height: 100%
+      &_item:not(:first-of-type)
+        clip-path: polygon(50% 25%, 50% 25%, 50% 75%, 50% 75%)
+    &__content
+      position: relative
+      margin: calc(var(--u-ritmo-verticale-vw) * 0) calc(var(--u-ritmo-verticale-vw) * 4)
+      &_item
+        position: absolute
+        left: 50%
+        top: 50%
+        translate: -50% -50%
+        width: 100%
+        display: flex
+        flex-direction: column
+        gap: calc(var(--u-ritmo-verticale-vw) * 3)
+        &.fs-l
+          p
+            font-size: calc(var(--u-ritmo-verticale-vw) * 8)
+            line-height: calc(var(--u-ritmo-verticale-vw) * 7)
+      p
+        font-size: calc(var(--u-ritmo-verticale-vw) * 4)
+        line-height: calc(var(--u-ritmo-verticale-vw) * 4)
+  &__card
+    display: flex
+    flex-direction: column
+    gap: calc(var(--u-ritmo-verticale-vw) * 2)
+    &_image
+      display: flex
+      margin: 0 calc(var(--u-ritmo-verticale-vw) * 1 * -1)
+    &_content
+      display: flex
+      flex-direction: column
+      gap: calc(var(--u-ritmo-verticale-vw) * 2)
+      &.fs-l
+        p
+          font-size: calc(var(--u-ritmo-verticale-vw) * 4)
+          line-height: calc(var(--u-ritmo-verticale-vw) * 4.5)
+      p
+        font-size: calc(var(--u-ritmo-verticale-vw) * 3)
+        line-height: calc(var(--u-ritmo-verticale-vw) * 3)
+

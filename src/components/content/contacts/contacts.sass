@@ -1,0 +1,72 @@
+.contacts
+  background-color: #ffffff
+  @media (min-width: 641px)
+    min-height: 600px
+    height: 100vh
+  &__container
+    display: flex
+    flex-direction: column-reverse
+    @media (min-width: 641px)
+      display: grid
+      grid-template-columns: calc(var(--u-ritmo-verticale-vw) * 90.5) 1fr
+      height: 100%
+
+
+  &__map
+    //width: calc(var(--u-ritmo-verticale-vw) * 90.5)
+    //height: 100%
+    aspect-ratio: 375/488
+    width: 100%
+    position: relative
+    filter: grayscale(1)
+    @media (min-width: 641px)
+      aspect-ratio: auto
+    &:after
+      content: ''
+      position: absolute
+      inset: 0
+      background: #fff
+      mix-blend-mode: exclusion
+      pointer-events: none
+    #map
+      width: 100%
+      height: 100%
+  &__content
+    display: flex
+    align-items: end
+    padding: calc(var(--u-ritmo-verticale-vw) * 2) calc(var(--u-ritmo-verticale-vw) * 1)
+    margin: calc(var(--u-ritmo-verticale-vw) * 16) 0
+    @media (min-width: 641px)
+      padding: calc(var(--u-ritmo-verticale-vw) * 5)
+      margin: 0
+  &__items
+    display: flex
+    flex-direction: column
+    width: 100%
+    justify-content: flex-end
+    gap: calc(var(--u-ritmo-verticale-vw) * 2.5)
+    @media (min-width: 641px)
+      gap: calc(var(--u-ritmo-verticale-vw) * 3)
+  &__item
+    display: flex
+    align-items: end
+    justify-content: space-between
+    border-bottom: 1px solid var(--default-text)
+    span
+      text-transform: uppercase
+      font-size: calc(var(--u-ritmo-verticale-vw) * 1.5)
+      line-height: calc(var(--u-ritmo-verticale-vw) * 2)
+      @media (min-width: 641px)
+        font-size: calc(var(--u-ritmo-verticale-vw) * 1.4)
+        line-height: calc(var(--u-ritmo-verticale-vw) * 3)
+    p
+      font-size: calc(var(--u-ritmo-verticale-vw) * 3)
+      line-height: calc(var(--u-ritmo-verticale-vw) * 3)
+      font-weight: 500
+      margin: 0
+      max-width: calc(var(--u-ritmo-verticale-vw) * 22.875)
+      width: 100%
+      @media (min-width: 641px)
+        max-width: calc(var(--u-ritmo-verticale-vw) * 45.25)
+        font-size: calc(var(--u-ritmo-verticale-vw) * 5)
+        line-height: calc(var(--u-ritmo-verticale-vw) * 5)

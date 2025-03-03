@@ -1,0 +1,29 @@
+.footer
+  //height: calc(var(--footerHeight) + 100vh)
+  //margin-top: -100lvh
+  padding:  calc(var(--u-ritmo-verticale-vw) * 5)  calc(var(--u-ritmo-verticale-vw) * 1)  calc(var(--u-ritmo-verticale-vw) * 3)
+
+  @media (min-width: 641px)
+
+    padding: calc(var(--u-ritmo-verticale-vw) * 12) calc(var(--u-ritmo-verticale-vw) * 5)
+  &__container
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: calc(var(--u-ritmo-verticale-vw) * 6.75)
+    @media (min-width: 641px)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+  &__actions
+    width: 100%
+    &.fixed
+      .button
+        position: relative
+        left: 0
+        bottom: 0
+  .button
+    @media (min-width: 641px)
+      position: fixed
+      top: auto
+      bottom: calc(var(--u-ritmo-verticale-vw) * 2)
+      left: calc(var(--u-ritmo-verticale-vw) * 5)

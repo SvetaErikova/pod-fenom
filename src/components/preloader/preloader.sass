@@ -1,0 +1,16 @@
+.preloader
+  background-color: #171717
+  position: fixed
+  inset: 0
+  z-index: 50
+  overflow: hidden
+  display: flex
+  align-items: center
+  justify-content: center
+  pointer-events: none
+  //display: none
+  &__logo
+    width: calc(var(--u-ritmo-verticale-vw) * 30)
+    filter: blur(10px)
+    @media (min-width: 641px)
+      width: calc(var(--u-ritmo-verticale-vw) * 90.5)
