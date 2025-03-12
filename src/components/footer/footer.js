@@ -1,7 +1,6 @@
-if ( window.matchMedia("(min-width: 641px)").matches ) {
-  let footer_action = document.querySelector('.footer .footer__actions')
-  let footer = document.querySelector('.footer')
-
+let footer = document.querySelector('.footer')
+if ( footer ) {
+  let footer_action = footer.querySelector('.footer__actions')
 
   let observer_point = new IntersectionObserver((entries, observer) => {
     entries.forEach( (entry) =>{
@@ -22,11 +21,12 @@ if ( window.matchMedia("(min-width: 641px)").matches ) {
   // footer.forEach(a => {
   //   observer_point.observe(a);
   // })
+  if ( window.matchMedia('(max-width:640px)').matches ) {
+    window.addEventListener('scroll', (e) => {
+      document.documentElement.scrollTop > 0 ? footer_action.querySelector('.footer__actions .button').classList.add('is_scrolled') : footer_action.querySelector('.footer__actions .button').classList.remove('is_scrolled')
+
+    })
+  }
+
 }
 
-// if ( window.matchMedia('(min-width:1240px)').matches ) {
-//   window.addEventListener('scroll', (e) => {
-//     document.documentElement.scrollTop > 0 ? footer_action.querySelector('.footer__actions .button').classList.add('is_scrolled') : footer_action.querySelector('.footer__actions .button').classList.remove('is_scrolled')
-//
-//   })
-// }

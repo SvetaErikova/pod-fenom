@@ -5,29 +5,25 @@
 //  src: url("../fonts/Onest/Onest-VariableFont_wght.ttf") format('truetype')
 //
 @font-face
-  font-family: 'VF_trial'
-  font-weight: 125 950
+  font-family: 'Commons'
+  font-weight: 400
   font-style: normal
-  src: url("../fonts/YFF_RARE_VF_TRIAL.ttf") format('truetype')
+  src: url("../fonts/Commons-Pro-Trial-Regular.ttf") format('truetype')
 
 @font-face
-  font-family: 'EctoBlack'
-  font-weight: 125 950
+  font-family: 'Commons'
+  font-weight: 490
   font-style: normal
-  src: url("../fonts/YFFRARETRIAL-EctoBlack.otf") format('truetype')
+  src: url("../fonts/Commons-Pro-Trial-Medium.ttf") format('truetype')
 @font-face
-  font-family: 'Trial-Light'
-  font-weight: 300
-  font-style: normal
-  src: url("../fonts/Neue-Trial-Light.ttf") format('truetype')
-@font-face
-  font-family: 'Trial-Regular'
+  font-family: 'Commons'
   font-weight: 400
-  font-style: normal
-  src: url("../fonts/Neue-Trial-Regular.ttf") format('truetype')
+  font-style: italic
+  src: url("../fonts/Commons-Pro-Trial-Medium-Italic.ttf") format('truetype')
+
 html
   font-weight: 400
-  font-family: 'Trial-Regular', sans-serif
+  font-family: 'Commons', sans-serif
   text-size-adjust: none
   -webkit-text-size-adjust: none
   --default-text: #171717
@@ -37,32 +33,26 @@ html
   @media(max-width: 640px)
     --u-ritmo-verticale-vw: 2.133333333333333vw
     //--u-ritmo-verticale: 1.244vw
+main > div
+  scroll-behavior: smooth
 body
   background-color: #171717
+  font-weight: 400
   position: relative
-  //&:after
-  //  content: ''
-  //  inset: 0
-  //  background: repeating-linear-gradient(transparent, transparent calc(var(--u-ritmo-verticale-vw) * 6.75), #B0B0B0 calc(var(--u-ritmo-verticale-vw) * 7)), repeating-linear-gradient(90deg, transparent, transparent calc(var(--u-ritmo-verticale-vw) * 11.75), #B0B0B0 calc(var(--u-ritmo-verticale-vw) * 12))
-  //  background-attachment: fixed
-  //  position: absolute
-  //  pointer-events: none
-  //  //transition: var(--transition)
-  //  //z-index: 2
-  //  z-index: -1
-  //  opacity: .3
-  //  transition: transform 0.3s linear
 #parallax
   inset: 0
-  background: repeating-linear-gradient(transparent, transparent calc(var(--u-ritmo-verticale-vw) * 6.75), #B0B0B0 calc(var(--u-ritmo-verticale-vw) * 7)), repeating-linear-gradient(90deg, transparent, transparent calc(var(--u-ritmo-verticale-vw) * 11.75), #B0B0B0 calc(var(--u-ritmo-verticale-vw) * 12))
+  background: repeating-linear-gradient(transparent, transparent calc(var(--u-ritmo-verticale-vw) * 4.75), #B0B0B0 calc(var(--u-ritmo-verticale-vw) * 5)), repeating-linear-gradient(90deg, transparent, transparent calc(var(--u-ritmo-verticale-vw) * 10.75), #B0B0B0 calc(var(--u-ritmo-verticale-vw) * 11))
   background-attachment: fixed
   position: absolute
   pointer-events: none
   //transition: var(--transition)
   //z-index: 2
   z-index: -1
-  opacity: .3
+  opacity: .2
   transition: transform 0.3s linear
+  @media (min-width: 641px)
+    background: repeating-linear-gradient(transparent, transparent calc(var(--u-ritmo-verticale-vw) * 6.75), #B0B0B0 calc(var(--u-ritmo-verticale-vw) * 7)), repeating-linear-gradient(90deg, transparent, transparent calc(var(--u-ritmo-verticale-vw) * 11.75), #B0B0B0 calc(var(--u-ritmo-verticale-vw) * 12))
+
 
 img
   width: 100%
@@ -76,7 +66,7 @@ a
   background-color: #ffffff
   font-size: calc(var(--u-ritmo-verticale-vw) * 2.25)
   line-height: calc(var(--u-ritmo-verticale-vw) * 3)
-  padding: calc(var(--u-ritmo-verticale-vw) * 2) calc(var(--u-ritmo-verticale-vw) * 4)
+  padding: calc(var(--u-ritmo-verticale-vw) * 2) 0
   font-weight: 490
   display: flex
   justify-content: center
@@ -86,18 +76,28 @@ a
     line-height: calc(var(--u-ritmo-verticale-vw) * 3)
     padding: calc(var(--u-ritmo-verticale-vw) * 2.5) calc(var(--u-ritmo-verticale-vw) * 12)
     width: max-content
+  span
+    transition: var(--transition)
   &:after
     content: ''
     position: absolute
-    top:  calc(var(--u-ritmo-verticale-vw) * 1)
+    top:  calc(var(--u-ritmo-verticale-vw) * 2)
     left: auto
-    right: calc(var(--u-ritmo-verticale-vw) * 1)
+    right: calc(var(--u-ritmo-verticale-vw) * 2)
     aspect-ratio: 1/1
     width: calc(var(--u-ritmo-verticale-vw) * 2)
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_81_19)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.9996 -0.000160217V2.67029e-05H16.0001V1.43654H15.9996L15.9996 11.4921H14.5631L14.5631 2.45285L5.01577 12.0002L4 10.9844L13.5478 1.43654H4.50788V2.67029e-05H14.5631V-0.000160217H15.9996Z' fill='black'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_81_19'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A")
     background-size: contain
     background-repeat: no-repeat
+    transition: var(--transition)
   &:hover
+    background-color: #343434
+    span
+      filter: invert(1)
+      scale: 0.8
+    &:after
+      filter: invert(1)
+      translate: calc(var(--u-ritmo-verticale-vw) * 1) calc(var(--u-ritmo-verticale-vw) * -1)
 
   &.-dark
     filter: invert(1)
@@ -122,3 +122,25 @@ p
 
   span
     display: inline-block
+.slide_up
+  display: inline-block
+  overflow-y: clip
+  height: auto
+  white-space: nowrap
+  span
+    position: relative
+    display: inline-block
+    transition: transform .3s
+    &::before
+      position: absolute
+      top: 100%
+      left: 0
+      display: inline-block
+      width: 100%
+      height: 100%
+      content: attr(data-hover)
+      transform: translate3d(0, 0, 0)
+
+  &:hover span
+    transform: translateY(-100%)
+

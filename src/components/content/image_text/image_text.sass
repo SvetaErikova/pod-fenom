@@ -3,7 +3,7 @@
     display: flex
     flex-direction: column
     color: #B0B0B0
-    gap: calc(var(--u-ritmo-verticale-vw) * 12)
+    gap: calc(var(--u-ritmo-verticale-vw) * 5)
     padding: 0 calc(var(--u-ritmo-verticale-vw) * 1)
     @media (min-width: 641px)
       display: grid
@@ -27,7 +27,8 @@
         clip-path: polygon(50% 25%, 50% 25%, 50% 75%, 50% 75%)
     &__content
       position: relative
-      margin: calc(var(--u-ritmo-verticale-vw) * 0) calc(var(--u-ritmo-verticale-vw) * 4)
+      margin: 0 calc(var(--u-ritmo-verticale-vw) * 4) 0 0
+      letter-spacing: -.10em
       &_item
         position: absolute
         left: 50%
@@ -37,6 +38,7 @@
         display: flex
         flex-direction: column
         gap: calc(var(--u-ritmo-verticale-vw) * 3)
+        font-weight: 490
         &.fs-l
           p
             font-size: calc(var(--u-ritmo-verticale-vw) * 8)
@@ -48,6 +50,7 @@
     display: flex
     flex-direction: column
     gap: calc(var(--u-ritmo-verticale-vw) * 2)
+
     &_image
       display: flex
       margin: 0 calc(var(--u-ritmo-verticale-vw) * 1 * -1)
@@ -62,4 +65,10 @@
       p
         font-size: calc(var(--u-ritmo-verticale-vw) * 3)
         line-height: calc(var(--u-ritmo-verticale-vw) * 3)
+  @media (max-width: 640px)
+    .image-text__card:first-of-type .image-text__card_image
+      display: none
+    .image-text__card_content
+      height: 50svh
+      justify-content: center
 

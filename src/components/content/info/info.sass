@@ -1,5 +1,5 @@
 .info
-
+  position: relative
   &__container
     padding: calc(var(--u-ritmo-verticale-vw) * 2) calc(var(--u-ritmo-verticale-vw) * 1)
     display: flex
@@ -17,7 +17,7 @@
     height: 100vh
     font-size: calc(var(--u-ritmo-verticale-vw) * 4)
     line-height: calc(var(--u-ritmo-verticale-vw) * 4.5)
-    letter-spacing: -.05em
+    letter-spacing: -.04em
     display: flex
     align-items: center
     @media (min-width: 641px)
@@ -27,7 +27,7 @@
     &_text
       font-size: calc(var(--u-ritmo-verticale-vw) * 3)
       line-height: calc(var(--u-ritmo-verticale-vw) * 3.5)
-      letter-spacing: -.04em
+      letter-spacing: -.03em
       margin-bottom: calc(var(--u-ritmo-verticale-vw) * 6)
       @media (min-width: 641px)
         font-size: calc(var(--u-ritmo-verticale-vw) * 7)
@@ -48,9 +48,10 @@
     position: sticky
     top: 0
     color: #fffdfd
-    height: 50vh
-    @media (min-width: 641px)
-      height: 100vh
+    height: 100svh
+    @media (max-width: 640px)
+      inset: 0
+      z-index: -1
 
 
 

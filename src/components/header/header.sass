@@ -4,6 +4,7 @@
   width: 100%
   max-width: 100vw
   z-index: 10
+
   @media (min-width: 641px)
     mix-blend-mode: difference
   @media (max-width: 640px)
@@ -19,7 +20,7 @@
       grid-template-columns: calc(var(--u-ritmo-verticale-vw) * 90.5) 1fr
       padding: calc(var(--u-ritmo-verticale-vw) * 2) calc(var(--u-ritmo-verticale-vw) * 5)
   &__logo
-    max-width: calc(var(--u-ritmo-verticale-vw) * 19.125)
+    max-width: calc(var(--u-ritmo-verticale-vw) * 20.875)
     width: 100%
     display: flex
     @media (min-width: 641px)
@@ -28,7 +29,6 @@
 .nav
   display: flex
   @media (min-width: 641px)
-
     color: #fff
     gap: calc(var(--u-ritmo-verticale-vw) * 2)
     justify-content: space-between
@@ -38,12 +38,16 @@
       text-transform: uppercase
       font-size: calc(var(--u-ritmo-verticale-vw) * 2)
       line-height: calc(var(--u-ritmo-verticale-vw) * 3)
+      letter-spacing: -.02em
+      &:hover
+        font-weight: 490
+
 .header__burger
   display: flex
   flex-direction: column
   justify-content: space-between
-  width: calc(var(--u-ritmo-verticale-vw) * 2.875)
-  height: calc(var(--u-ritmo-verticale-vw) * 1.5)
+  width: calc(var(--u-ritmo-verticale-vw) * 4)
+  height: calc(var(--u-ritmo-verticale-vw) * 1)
   cursor: pointer
   position: relative
   & span
@@ -53,11 +57,9 @@
     background-color: #FFFFFF
     transition: all 0.3s ease
   &.is_active span:nth-child(1)
-    transform: translateY(5.5px) rotate(30deg)
+    transform: translateY(5px) rotate(25deg)
   &.is_active span:nth-child(2)
-    opacity: 0
-  &.is_active span:nth-child(3)
-    transform: translateY(-5.5px) rotate(-30deg)
+    transform: translateY(-5px) rotate(-25deg)
 
 @media (max-width: 640px)
   .menu
@@ -65,7 +67,7 @@
     position: fixed
     z-index: 5
     padding-top: var(--headerHeight)
-    height: 100svh
+    height: calc(100dvh - var(--headerHeight) + 1px)
     width: 101%
     pointer-events: none
     translate: 100% 0

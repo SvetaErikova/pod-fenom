@@ -1,15 +1,11 @@
 .footer
-  //height: calc(var(--footerHeight) + 100vh)
-  //margin-top: -100lvh
   padding:  calc(var(--u-ritmo-verticale-vw) * 5)  calc(var(--u-ritmo-verticale-vw) * 1)  calc(var(--u-ritmo-verticale-vw) * 3)
-
   @media (min-width: 641px)
-
     padding: calc(var(--u-ritmo-verticale-vw) * 12) calc(var(--u-ritmo-verticale-vw) * 5)
   &__container
     display: flex
     flex-direction: column
-    align-items: center
+    align-items: end
     gap: calc(var(--u-ritmo-verticale-vw) * 6.75)
     @media (min-width: 641px)
       display: grid
@@ -21,9 +17,41 @@
         position: relative
         left: 0
         bottom: 0
+  &__logo
+    display: flex
+    position: relative
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    @media (max-width: 640px)
+      width: 100%
+    img
+      animation: bounce 3s infinite linear
   .button
+    position: fixed
+    top: auto
+    bottom: calc(var(--u-ritmo-verticale-vw) * 2)
+    @media (max-width: 640px)
+      width: calc(100vw - calc(var(--u-ritmo-verticale-vw) * 2))
+      &:not(.is_scrolled)
+        filter: invert(1)
+
+  &__copyright
+    font-size: calc(var(--u-ritmo-verticale-vw) * 2)
+    line-height: calc(var(--u-ritmo-verticale-vw) * 2)
+    color: #535353
+    margin-top: calc(var(--u-ritmo-verticale-vw) * 2.5)
+    text-transform: uppercase
+    text-align: center
     @media (min-width: 641px)
-      position: fixed
+      position: absolute
       top: auto
-      bottom: calc(var(--u-ritmo-verticale-vw) * 2)
-      left: calc(var(--u-ritmo-verticale-vw) * 5)
+      bottom: calc(var(--u-ritmo-verticale-vw) * -3)
+      left: 0
+      margin-top: 0
+@keyframes bounce
+  0%,100%
+    transform: translateY(0)
+  50%
+    transform: translateY(5%)
+

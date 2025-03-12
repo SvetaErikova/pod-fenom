@@ -1,16 +1,18 @@
 header.header
   .header__container
     .header__logo
-      img(  src='./assets/img/logo.png')
+      img(  src='./assets/img/logo.svg')
     nav.nav.-desk
       .nav__item
-        a(href='#info') Философия
+        a(href='#info').slide_up
+          span(data-hover="Философия") Философия
       .nav__item
-        a(href='#about') о парикмахерской
+        a(href='#about').slide_up
+          span(data-hover="о парикмахерской") о парикмахерской
       .nav__item
-        a(href='#contacts') контакты
+        a(href='#contacts').slide_up
+          span(data-hover="контакты") контакты
     .header__burger.-mob
-      span
       span
       span
 .menu.-mob
@@ -21,7 +23,7 @@ header.header
       a(href='#about') о парикмахерской
     .nav__item
       a(href='#contacts') контакты
-    a(href='').button-menu
+    a(href='' target='_blank').button-menu
       span записаться
 
 

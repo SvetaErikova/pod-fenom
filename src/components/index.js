@@ -4,6 +4,7 @@ window.addEventListener('scroll', function() {
   parallax.style.backgroundPositionY = offset * 0.5 + 'px'; // 0.5 - коэффициент для параллакса
 });
 
+
 // Функция для запуска анимации
 const splitTextElements = document.querySelectorAll("[data-split-text]");
 
@@ -24,3 +25,4 @@ splitTextElements.forEach((element) => {
     },
   });
 });
+

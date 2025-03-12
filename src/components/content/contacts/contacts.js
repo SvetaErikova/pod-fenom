@@ -10,7 +10,7 @@ if(map_contacts){
     });
 
     myMap.geoObjects
-      .add(new ymaps.Placemark([59.935791, 30.352367], {
+      .add(new ymaps.Placemark([59.935574, 30.352259], {
         balloonContent: 'Под щитом',
         hintContent: 'Под щитом'
       },
