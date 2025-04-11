@@ -81,6 +81,6 @@ function zentryScroll() {
 // Запускаем функцию после загрузки DOM
 document.addEventListener("DOMContentLoaded", (event) => {
   if (window.matchMedia('(min-width: 641px)').matches) {
-    zentryScroll();
+    // zentryScroll();
   }
 });

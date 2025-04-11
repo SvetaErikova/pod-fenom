@@ -27,7 +27,7 @@ html(lang="ru-RU" dir="ltr")
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
     <link rel="mask-icon" href="./assets/img/favicon/safari-pinned-tab-333x333.svg" color="#5bbad5">
     <meta name="robots" content="all" />
-    <meta name="author" content="Ритм">
+    <meta name="author" content="Под феном">
     <meta name="theme-color" content="#171717">
     <meta name="url" content="">
     <meta name="msapplication-TileColor" content="#171717">
@@ -35,7 +35,7 @@ html(lang="ru-RU" dir="ltr")
 
 
     link(rel="stylesheet" type='text/css' href="https://unitbox.one/dist/css/normalize.css ")
-    //link(rel="stylesheet" type='text/css' href="./assets/css/libs.min.css")
+    link(rel="stylesheet" type='text/css' href="./assets/css/libs.min.css")
     link(rel="stylesheet" type='text/css' href="./assets/css/main.css")
 
     <!--[if lt IE 9]>
@@ -44,7 +44,6 @@ html(lang="ru-RU" dir="ltr")
   body(class=pageClass)
     .page
       include ../components/preloader/preloader
-      #parallax
       include ../components/header/header
       main
         block content

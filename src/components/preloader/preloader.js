@@ -24,4 +24,5 @@ function preloaderStart(){
   });
 }
 
-preloaderStart()
+// preloaderStart()
+preloader.style.display ="none"

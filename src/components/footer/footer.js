@@ -1,4 +1,4 @@
-let footer = document.querySelector('.footer')
+let footer = document.querySelector('.footer2')
 if ( footer ) {
   let footer_action = footer.querySelector('.footer__actions')
 

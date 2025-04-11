@@ -1,33 +1,3 @@
-// 		split-text
-
-// Project setup
-gsap.registerPlugin( SplitText)
-
-let animDuration = 0.73;
-let animStart = 'top 90%';
-let toggleAction = 'restart reverse restart reverse';
-
-// Split text usage
-
-let split = document.querySelectorAll( '.split_text' );
-let text = new SplitText( split , { type: 'words' } )
-let words = text.words;
-
-gsap.from( words, {
-  yPercent: 100,
-  stagger: 0.073,
-  opacity: 0,
-  ease: 'cubic-bezier( .56 , .52 , .53 , 1.25 )',
-  duration: animDuration,
-
-  scrollTrigger: {
-    trigger: split,
-    start: animStart,
-    toggleActions: toggleAction,
-    // markers: true
-  }
-});
-
 if(window.matchMedia("(max-width: 640px)").matches ){
   // 		split-text
   let animDuration = 0.5;

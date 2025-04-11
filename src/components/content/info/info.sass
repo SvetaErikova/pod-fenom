@@ -1,5 +1,6 @@
 .info
   position: relative
+  margin-top: -100vh
   &__container
     padding: calc(var(--u-ritmo-verticale-vw) * 2) calc(var(--u-ritmo-verticale-vw) * 1)
     display: flex
@@ -10,19 +11,19 @@
     @media (min-width: 641px)
       flex-direction: row
       padding: calc(var(--u-ritmo-verticale-vw) * 5) calc(var(--u-ritmo-verticale-vw) * 5) 0
-
   &__content
     max-width: calc(var(--u-ritmo-verticale-vw) * 122)
   &__title
-    height: 100vh
+    //height: 100vh
     font-size: calc(var(--u-ritmo-verticale-vw) * 4)
-    line-height: calc(var(--u-ritmo-verticale-vw) * 4.5)
+    line-height: calc(var(--u-ritmo-verticale-vw) * 4)
     letter-spacing: -.04em
     display: flex
     align-items: center
     @media (min-width: 641px)
-      font-size: calc(var(--u-ritmo-verticale-vw) * 10)
-      line-height: calc(var(--u-ritmo-verticale-vw) * 10)
+      font-size: calc(var(--u-ritmo-verticale-vw) * 7)
+      line-height: calc(var(--u-ritmo-verticale-vw) * 7)
+      padding:  calc(var(--u-ritmo-verticale-vw) * 7) 0
   &__content
     &_text
       font-size: calc(var(--u-ritmo-verticale-vw) * 3)
@@ -43,15 +44,7 @@
         height: 100vh
       img
         object-fit: cover
-  &__3d
-    width: 100%
-    position: sticky
-    top: 0
-    color: #fffdfd
-    height: 100svh
-    @media (max-width: 640px)
-      inset: 0
-      z-index: -1
+
 
 
 
